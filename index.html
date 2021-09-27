@@ -148,6 +148,9 @@
             let localStorageTodos = localStorage.getItem('todos');
             let localStorageTodosArray = JSON.parse(localStorageTodos);
             let str = "";
+            if (localStorageTodosArray == null){
+                localStorageTodosArray = [];
+            }
             localStorageTodosArray.forEach((element, index) => {
                 str += 
                 `<tr>
